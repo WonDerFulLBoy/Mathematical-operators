@@ -1,0 +1,28 @@
+#include<iostream>
+#include<conio.h>
+using namespace std;
+int zarb(int,int);
+int main()
+{
+    int a,b;
+    cout<<"enter two numbers:\n\n";
+    cout<<"a=";
+    cin>>a;
+    cout<<"b=";
+    cin>>b;
+    cout<<"\n\n"<<a<<'*'<<b<<'=';
+    cout<<zarb(a,b);
+    cout<<"\n\n"<<"press any key to exit...";
+    getch();
+    return 0;
+}
+ 
+//**********
+int zarb(int a,int b)
+{
+    if(b==1)
+    return a;
+    else
+    return a+zarb(a,b-1);
+}
+ 
