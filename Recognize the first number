@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <conio.h>
+int prime(int);
+int main()
+{
+  int num;
+  char ans;
+  while(1) {
+     printf("\n Enter a number:") ;
+     scanf("%d", &num);
+     if(prime(num))
+    printf("\n Number %d is prime.", num);
+     else
+    printf("\n Number %d is  not prime.", num);
+     printf("\n Do you want to continue?(y/n):");
+     ans = getche();
+     if(ans != 'y')
+     break;
+  }// end of while
+  getch();
+  return 0;
+}
+//********************
+int prime(int num)
+{
+  int i, temp = 1;
+  for(i = 2; (i <= num / 2)  && temp ; i++)
+      if(num % i == 0)
+     temp = 0;
+  return temp;
+}
