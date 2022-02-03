@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <conio.h>
+void winput(int *, int *);
+void rect(int, int, int *, int *);
+int main()
+{
+  int len, wid, area, per;
+  winput(&len, &wid);
+  rect(len, wid, &area, &per);
+  printf(" length = %d, width = %d", len, wid);
+  printf("\n area = %d, perimer = %d", area, per);
+  getch();
+  return 0;
+}
+//**************************
+void winput(int *p1, int *p2)
+{
+  printf(" enter length, width :");
+  scanf("%d%d", p1, p2);
+}
+//***************************
+void rect(int x, int y, int *a, int *p)
+{
+  *a = x * y;
+  *p = 2 * (x + y);
+}
